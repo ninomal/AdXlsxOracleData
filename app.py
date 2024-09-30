@@ -1,6 +1,8 @@
+from productsService.productsService import ProductsService
 
 def main():
-    print("start now")
+     products = ProductsService()
+     products.test()
 
 
 if __name__ == "__main__":
