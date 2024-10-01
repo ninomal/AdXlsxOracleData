@@ -5,7 +5,7 @@ def main():
     productsService = ProductsService()
     products = Products()
 
-    print(products.readXlsx(r"path here"))
+    print(products.readXlsx(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx"))
 
     #productsService.addDataOracle(data)
     #print(productsService.exemple())
