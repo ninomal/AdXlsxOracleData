@@ -14,11 +14,14 @@ def main():
     #info =productsService.getTableInfo('products')
     #print(info)
 
+    print(productsService.getXlsxCOlmunsName(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx"))
+
+
     #for add value in row auto
-    print(productsService.getColumnsNames('products'))
-    data = {'ID_PRODUCTS': 6, 'NOME_PRODUCTS':'phone razer', 'MARCA':'RAZER',
-            'CATEGORIA':'microhpone', 'PRECO_UNIT': 800, 'CUSTO_UNIT': 450}
-    print(productsService.addOracleDataAuto('products', data))
+    #print(productsService.getColumnsNames('products'))
+    #data = {'ID_PRODUCTS': 6, 'NOME_PRODUCTS':'phone razer', 'MARCA':'RAZER',
+            #'CATEGORIA':'microhpone', 'PRECO_UNIT': 800, 'CUSTO_UNIT': 450}
+    #print(productsService.addOracleDataAuto('products', data))
 
 
 

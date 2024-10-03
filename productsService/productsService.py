@@ -130,23 +130,20 @@ class ProductsService():
         except IndexError:
             return ("INDEX ERROR")
     
+    def getXlsxCOlmunsName(self, path):
+        try:
+            df = pd.read_excel(path, header=0)
+            return df.columns.tolist()
+        
+        except FileNotFoundError:
+            return ("ERROR PATH")
+        except ValueError:
+            return ("Valuer ERROR ")
+        except IndexError:
+            return ("INDEX ERROR")
 
-    def exemple(self):
-        return(
-        '''
-            EXEMPLO
-            
-            dictTest = {'clients_id':4, 'nome_client':'joao', 'sexo':'m',
-                        'email':'joao@gamil.com', 'idade': '20/09/1980'}
 
-            insert_query = """INSERT INTO 
-                            clients(clients_id, nome_client, sexo, email, idade) VALUES
-                                    (:clients_id, :nome_client, :sexo, :email, :idade)"""
-
-            self.cursor.execute(insert_query, dictTest)
-
-            self.conection.commit()
-        ''' )
+    
       
 
           
