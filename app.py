@@ -14,7 +14,15 @@ def main():
     #info =productsService.getTableInfo('products')
     #print(info)
 
-    print(productsService.getXlsxCOlmunsName(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx"))
+    #print(productsService.getXlsxCOlmunsName(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx"))
+
+    products.createTable('1')
+
+
+
+
+
+
 
 
     #for add value in row auto

@@ -1,7 +1,9 @@
+from enums.enumsTypes import EnumsType
+
 
 class Products():
     def __init__(self):
-        pass
+        self.enumsType = EnumsType()
    
     def createColumnsAdd(self, columnsName):
         stringList = []
@@ -13,6 +15,9 @@ class Products():
         print(stringList)
         return stringList
 
+    def createTable(self, listOfColumns):
+        print(self.enumsType.getAllEnumsType())
+        print(self.enumsType.enumType(1))
       
 
         
