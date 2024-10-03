@@ -4,18 +4,21 @@ from products.products import Products
 def main():
     productsService = ProductsService()
     products = Products()
-    #rowLen = productsService.getLenXlsx(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx")
     #print(productsService.readXlsxRowSelect(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", "DIA"))
     
+    #rowLen = productsService.getLenXlsx(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx")
     #for i in range(rowLen):
-        #print(productsService.readXlsxIloc(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", i))
+        #print(productsService.readXlsxIloc(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", i)['DIA'])
 
     #info tables
-    #productsService.getTableInfo('products')
+    #info =productsService.getTableInfo('products')
+    #print(info)
 
     #for add value in row auto
     print(productsService.getColumnsNames('products'))
-    #productsService.addOracleDataAuto('products', None)
+    data = {'ID_PRODUCTS': 6, 'NOME_PRODUCTS':'phone razer', 'MARCA':'RAZER',
+            'CATEGORIA':'microhpone', 'PRECO_UNIT': 800, 'CUSTO_UNIT': 450}
+    print(productsService.addOracleDataAuto('products', data))
 
 
 

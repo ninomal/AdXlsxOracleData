@@ -40,9 +40,8 @@ class ProductsService():
                 INSERT INTO {tableName}({stringsInput[0]})VALUES
                             ({stringsInput[1]})
                 """
-            print(insert_query)
-            #self.cursor.execute(insert_query, dictData)
-
+            self.cursor.execute(insert_query, dictData)
+            
             # Commit the transaction
             self.conection.commit()  
             return ("Data added successfully!")
