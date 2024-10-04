@@ -11,13 +11,17 @@ def main():
         #print(productsService.readXlsxIloc(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", i)['DIA'])
 
     #info tables
-    #info =productsService.getTableInfo('products')
+    #info = productsService.getTableInfo('products')
     #print(info)
 
-    #print(productsService.getXlsxCOlmunsName(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx"))
-
-    products.createTable('1')
-
+    #for create table
+    print(productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx"))
+    listOfColumns = productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx")
+    print('\n\n\n\'', products.getEnumsType())
+    listCreateTable = [1, 1, 3, 2]
+    #print(products.createTable(listOfColumns, listCreateTable))
+    stringDataCreateTable = products.createTable(listOfColumns, listCreateTable)
+    productsService.createTableAuto('products2', stringDataCreateTable)
 
 
 

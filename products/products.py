@@ -15,9 +15,18 @@ class Products():
         print(stringList)
         return stringList
 
-    def createTable(self, listOfColumns):
-        print(self.enumsType.getAllEnumsType())
-        print(self.enumsType.enumType(1))
-      
+    # ADD in string output and mescle two list for create table
+    def createTable(self, listOfColumns, listOfEnumsTypes):
+        stringMescle =''
+        for row in range(len(listOfColumns)):
+            enumsType = self.enumsType.type(listOfEnumsTypes[row])
+            if row == len(listOfColumns)- 1:
+                stringMescle += f'{listOfColumns[row]} {enumsType}'
+            else:
+                stringMescle += f'{listOfColumns[row]} {enumsType} , \n'
+        return stringMescle
+    
+    def getEnumsType(self):
+        return self.enumsType.getAllEnumsType()
 
         
