@@ -1,9 +1,11 @@
 from productsService.productsService import ProductsService
 from products.products import Products
+from ui.ui import Ui
 
 def main():
     productsService = ProductsService()
     products = Products()
+    ui = Ui()
     #print(productsService.readXlsxRowSelect(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", "DIA"))
     
     #rowLen = productsService.getLenXlsx(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx")
@@ -15,14 +17,14 @@ def main():
     #print(info)
 
     #for create table
-    print(productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx"))
-    listOfColumns = productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx")
-    print('\n\n\n\'', products.getEnumsType())
-    listCreateTable = [1, 1, 3, 2]
+    #print(productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx"))
+    #istOfColumns = productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx")
+    #print('\n\n\n\'', products.getEnumsType())
+    #listCreateTable = [1, 1, 3, 2]
     #print(products.createTable(listOfColumns, listCreateTable))
-    stringDataCreateTable = products.createTable(listOfColumns, listCreateTable)
-    productsService.createTableAuto('products2', stringDataCreateTable)
-
+    #stringDataCreateTable = products.createTable(listOfColumns, listCreateTable)
+    #productsService.createTableAuto('products2', stringDataCreateTable)
+    print(products.randImage())
 
 
 

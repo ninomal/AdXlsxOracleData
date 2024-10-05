@@ -1,5 +1,5 @@
 from enums.enumsTypes import EnumsType
-
+import random
 
 class Products():
     def __init__(self):
@@ -29,4 +29,9 @@ class Products():
     def getEnumsType(self):
         return self.enumsType.getAllEnumsType()
 
+    def randImage(self):
+        rng = random.Random()
+        randInt = rng.randint(1, 5)
+        path = f"ui\image\ess{randInt}.png"
+        return path
         
