@@ -40,10 +40,12 @@ class ProductsService():
                 INSERT INTO {tableName}({stringsInput[0]})VALUES
                             ({stringsInput[1]})
                 """
-            print("Dentro da querry, precisa criar uma triger para o dict :KEYS")
+            
+            print("\n\n Dentro da querry, precisa criar uma triger para o dict :KEYS")
             print(stringsInput[1])
 
-            
+
+            print("\n esse")
             print(dictData)
             self.cursor.execute(insert_query, dictData)
             
