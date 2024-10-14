@@ -5,7 +5,7 @@ from ui.ui import Ui
 def main():
     productsService = ProductsService()
     products = Products()
-    ui = Ui()
+    #ui = Ui()
     #print(productsService.readXlsxRowSelect(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx", "DIA"))
     
     #rowLen = productsService.getLenXlsx(r"D:\Users\User\Desktop\CURSO PYTON\DiarioPython\2024.xlsx")
@@ -17,14 +17,17 @@ def main():
     #print(info)
 
     #for create table
-    #print(productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx"))
-    #istOfColumns = productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx")
-    #print('\n\n\n\'', products.getEnumsType())
-    #listCreateTable = [1, 1, 3, 2]
-    #print(products.createTable(listOfColumns, listCreateTable))
-    #stringDataCreateTable = products.createTable(listOfColumns, listCreateTable)
-    #productsService.createTableAuto('products2', stringDataCreateTable)
+    R"""
+    print(productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx"))
+    listOfColumns = productsService.getXlsxCOlmunsName(r"C:\Users\ninomal\Documents\products.xlsx")
+    print('\n\n\n\'', products.getEnumsType())
+    listCreateTable = [1, 1, 3, 2]
+    print(products.createTable(listOfColumns, listCreateTable))
+    stringDataCreateTable = products.createTable(listOfColumns, listCreateTable)
+    productsService.createTableAuto('products3', stringDataCreateTable)
     print(products.randImage())
+    """
+
 
 
 
@@ -32,10 +35,10 @@ def main():
 
 
     #for add value in row auto
-    #print(productsService.getColumnsNames('products'))
-    #data = {'ID_PRODUCTS': 6, 'NOME_PRODUCTS':'phone razer', 'MARCA':'RAZER',
-            #'CATEGORIA':'microhpone', 'PRECO_UNIT': 800, 'CUSTO_UNIT': 450}
-    #print(productsService.addOracleDataAuto('products', data))
+    print(productsService.getColumnsNames('products3'))
+    data = {'ID_PRODUCTS': 6, 'NOME_PRODUCTS':'phone razer', 'MARCA':'RAZER',
+            'CATEGORIA':'microhpone', 'PRECO_UNIT': 800, 'CUSTO_UNIT': 450}
+    print(productsService.addOracleDataAuto('products', data))
 
 
 
