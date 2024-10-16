@@ -12,11 +12,11 @@ class Conection():
                                 password= self.user.getPassword(),
                                 dsn= self.user.getDns(),
                                 encoding="UTF-8")
-            return("Conected")
+            print("Conected")
             
         except cx_Oracle.DatabaseError as e:
             error, = e.args
-            return("Oracle Database Error:", error.message)
+            print("Oracle Database Error:", error.message)
         
     def getConection(self):
         try:

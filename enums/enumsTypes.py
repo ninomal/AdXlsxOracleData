@@ -6,7 +6,7 @@ class EnumsType():
     def __init__(self):
         pass
 
-    def type(self, type, varCharSize = 50, numberSizeTuple = (10, 2),
+    def type(self, type, varCharSize = 250, numberSizeTuple = (10, 2),
                      integer = 10, decimal = 10):
         match type:
             case 1: 
