@@ -1,26 +1,22 @@
-import re
+import tkinter as tk
+from tkinter import filedialog
+import pyperclip
 
-# List of strings
-strings = [
-    "Hello, World!",
-    "Python is great @2024",
-    "Special characters: #, $, %, &",
-    "Just text with no specials"
-]
+def select_file():
+    # Open a file dialog to select a file
+    file_path = filedialog.askopenfilename()
+    if file_path:
+        # Copy the file path to the clipboard
+        pyperclip.copy(file_path)
+        print(f"Copied path: {file_path}")
 
-# Regular expression pattern to find special characters
-pattern = r'[^a-zA-Z0-9\s]'
+# Set up the main application window
+root = tk.Tk()
+root.title("File Path Copier")
 
-# Create a new list to store modified strings
-modified_strings = []
+# Create a button to open the file dialog
+button = tk.Button(root, text="Select a File", command=select_file)
+button.pack(pady=20)
 
-# Iterate through each string in the list
-for text in strings:
-    # Replace special characters with '_'
-    modified_text = re.sub(pattern, '_', text)
-    modified_strings.append(modified_text)
-
-# Print the modified strings
-for original, modified in zip(strings, modified_strings):
-    print(f"Original: {original}\nModified: {modified}\n")
-
+# Run the application
+root.mainloop()
